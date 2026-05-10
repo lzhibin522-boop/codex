@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="card">
+    <view class="title">💊 用药提醒</view>
+    <input class="input" placeholder="药品名称（如：阿司匹林）" value="{{medName}}" bindinput="onMedNameInput" />
+    <input class="input" placeholder="剂量（如：100mg）" value="{{medDose}}" bindinput="onMedDoseInput" />
+    <picker mode="time" value="{{medTime}}" bindchange="onMedTimeChange">
+      <view class="picker">提醒时间：{{medTime || '请选择时间'}}</view>
+    </picker>
+    <button class="btn" bindtap="addMed">添加提醒</button>
+
+    <block wx:for="{{meds}}" wx:key="index">
+      <view class="item inline">
+        <view>{{item.name}} · {{item.dose}} · {{item.time}}</view>
+        <button size="mini" type="warn" data-index="{{index}}" bindtap="removeMed">删除</button>
+      </view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="title">🩺 症状记录</view>
+    <input class="input" placeholder="症状（如：头痛）" value="{{symptomName}}" bindinput="onSymptomNameInput" />
+    <view>强度：{{symptomLevel}} / 10</view>
+    <slider min="1" max="10" step="1" value="{{symptomLevel}}" bindchange="onLevelChange" show-value />
+    <textarea class="textarea" placeholder="备注（可选）" value="{{symptomNote}}" bindinput="onSymptomNoteInput" />
+    <button class="btn" bindtap="addSymptom">保存记录</button>
+
+    <block wx:for="{{symptoms}}" wx:key="index">
+      <view class="item">
+        <view>{{item.name}}（强度 {{item.level}}/10）</view>
+        <view>{{item.note || '无备注'}}</view>
+        <view class="tip">{{item.ts}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="title">📈 今日健康概览</view>
+    <view>今日用药提醒：{{summary.medCount}} 条</view>
+    <view>今日症状记录：{{summary.symptomCount}} 条</view>
+    <view>今日平均症状强度：{{summary.avgLevel}}</view>
+    <view class="tip">⚠️ 本应用仅用于健康管理记录，不提供诊断建议；如有不适请及时就医。</view>
+  </view>
+</view>
