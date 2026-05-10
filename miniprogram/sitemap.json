@@ -1,0 +1,4 @@
+{
+  "desc": "康伴健康助手 sitemap",
+  "rules": [{ "action": "allow", "page": "*" }]
+}

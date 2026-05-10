@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "康伴健康助手",
+    "navigationBarBackgroundColor": "#2166f3",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f3f8ff",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

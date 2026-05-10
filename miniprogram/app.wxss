@@ -1,0 +1,60 @@
+page {
+  background: #f3f8ff;
+  color: #1c2840;
+  font-size: 28rpx;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 24rpx;
+  margin-bottom: 20rpx;
+  box-shadow: 0 10rpx 28rpx rgba(24, 62, 143, 0.08);
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-bottom: 16rpx;
+}
+
+.input,
+.picker,
+.textarea,
+.btn {
+  width: 100%;
+  border: 1rpx solid #ccd8ef;
+  border-radius: 14rpx;
+  padding: 14rpx;
+  margin-bottom: 14rpx;
+  background: #fff;
+}
+
+.btn {
+  background: #2166f3;
+  color: #fff;
+  border: none;
+}
+
+.item {
+  border: 1rpx solid #e2ebfb;
+  border-radius: 14rpx;
+  padding: 14rpx;
+  margin-bottom: 12rpx;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12rpx;
+}
+
+.tip {
+  color: #4b5a77;
+  font-size: 24rpx;
+}
